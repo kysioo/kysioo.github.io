@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Responsywne</title>
+    <style>
+	table { border-collapse: collapse; } 
+    @media (max-width:720px){
+     table { border: none; }
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute; top: -9999px; left: -9999px; }
+    tr { border: 1px solid #ccc; margin-bottom: 1em; }
+    tr:nth-of-type(odd) { background: #abe; }
+    td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25%;
+  }
+  td:before {
+     position: absolute;
+  
+    top: 1px;
+    left: 2px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before { content: "Dzień "; }
+  td:nth-of-type(2):before { content: "Godzina "; }
+  td:nth-of-type(3):before { content: "Przedmiot " ; }
+  td:nth-of-type(4):before { content: "Sala "; } 
+  td:nth-of-type(5):before { content: "Rodzaj "; } 
+  
+} 
+@media (min-width:721px) {
+  tr:nth-child(2n+1) { background-color: yellow; }
+  table thead tr:nth-child(n) { background-color: red; color: white; }
+}
+img {
+        width: 100%;
+        height: auto;
+        max-width: 1920px; 
+      }
+	  body { 
+			color: green; 			
+		}
+		@media all and (min-width:445px) and (max-width:720px){
+			body { color: red; }
+		}
+		@media screen and (min-width:721px){
+			body { color: black; }
+		}
+    </style>
+  </head>
+
+  <body>
+    <article>
+      <h1>Responsywne tabele plan</h1>
+      <table style="width:100%;" border="1">
+        <thead>
+          <tr>
+            <th>Dzień</th>
+            <th>Godzina</th>
+            <th>Przedmiot</th>
+            <th>Sala</th>
+            <th>Rodzaj</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> 
+            <td>Wtorek</td>
+            <td>10:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>11:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>12:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>13:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+          <tr> 
+            <td>Wtorek</td>
+            <td>14:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>2</td>
+            <td>Wykład</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>15:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>2</td>
+            <td>Wykład</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>16:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Wtorek</td>
+            <td>17:00</td>
+            <td>Architektura serwisów internetowych</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>10:00</td>
+            <td>Seminarium</td>
+            <td>328</td>
+            <td>Seminarium</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>11:00</td>
+            <td>Seminarium</td>
+            <td>328</td>
+            <td>Seminarium</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>12:00</td>
+            <td>Technologie NoSQL</td>
+            <td>1</td>
+            <td>Wykład</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>13:00</td>
+            <td>Technologie NoSQL</td>
+            <td>1</td>
+            <td>Wykład</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>14:00</td>
+            <td>Technologie NoSQL</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+		  <tr> 
+            <td>Środa</td>
+            <td>15:00</td>
+            <td>Technologie NoSQL</td>
+            <td>25</td>
+            <td>Laboratorium</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    
+      <h1>Obrazy o elastycznej szerokości</h1>
+      <figure>
+        <img src="ug.jpg">
+        <figcaption> Obraz </figcaption>
+      </figure>
+	  <h1>TEKST</h1>
+	  <p>Wykonano na podstawie książki: 
+	  "HTML CSS I JavaScript dla kazdego" Wydanie-VII 	Autorzy: Laura Lemay, Rafe Colburn, Jennifer Kyrnin
+	  Wydawnictwo Helion.pl. Dla projektu responsywnego przyjmuje się założenie, że pomimo różności 
+	   urządzeń w których będzie wyświetlana dana strona, treść musi pozostać taka sama. Podstawową zasadą jest
+       tu "najpierw urzadzenia mobilne".	   
+	  </p>
+   </body>
+</html>
