@@ -3,7 +3,7 @@
 
 		<title>Plan</title>
 		<!-- <h1>Responsywna tableka z planem zajęć</h1> -->
-		
+		<h1>STRONKA W BUDOWIE</h1>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- <script src="assets/tablescript.js" type="text/javascript"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -19,7 +19,7 @@
 
 <body>
 
-	
+	<a href="https://mlabuda2.github.io/ti_2017/"><p id='home'>Home</p></a>
 
 
 	<div class='wrapper'>
@@ -90,9 +90,68 @@
 	</table>
 </section>
 
+<section id='flip-scroll'>
+	<h3>Responsywność metodą Scrollowania</h3>
+	<table id="plan2" class="table-bordered table-striped table-condensed cf">
+		<caption>Tytuł tabeli</caption>
+		<thead class="cf">
+			<tr>
+				<th class='th'>Dzień</th>
+				<th class='th'>Godzina</th>
+				<th class='th'>Przedmiot</th>
+				<th class='th'>Grupa</th>
+				<th class='th' class='numeric'>Sala</th>
+				<th class='th'>Uwagi</th>
+				<th class='th'>Rodzaj zajęć</th>
+			</tr>
+		</thead>
+		<tbody>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				var fieldValue;
+				var zmiennaplan;
+				document.getElementById('nauczycielid').addEventListener('change', function() {
+					fieldValue = document.getElementById('nauczycielid').value;
+					if(fieldValue == "Bzyl, Włodzimierz, dr"){
+						zmiennaplan = planwb;
+					}else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+						zmiennaplan = plantb;
+					}
 
+					$(function() {
+							$.each(zmiennaplan, function(i, item) {
+								var $tr = $("<tr class='tr'>").append(
+											$('<td>').text(item.dzien),
+											$("<td class='numeric'>").text(item.godz),
+											$('<td>').text(item.przedmiot),
+											$('<td>').text(item.grupa),
+											$("<td class='numeric'>").text(item.sala),
+											$('<td>').text(item.typ),
+											$('<td>').text(item.uwagi)
+									);
+								// console.log($tr.wrap('<p>').html());
+								$('#plan2').append($tr);
+							});
+					});
+				});
+				});
+			</script>
+		</tbody>
+	</table>
+</section>
+</div>
 
+<div id='twosources'>
+	<picture>
+	  <source srcset="assets/images/small_mu_img.jpg" media="(max-width: 640px)">
+	  <source srcset="assets/images/mu_img.jpg">
+	  <img src="assets/images/mu_img.jpg" alt="Manchester">
+	</picture>
+</div>
 
+<img src="assets/images/morze.jpg" alt="Morze">
+
+<a href="https://mlabuda2.github.io/ti_2017/"><p>Home</p></a>
 
 
 <script>
