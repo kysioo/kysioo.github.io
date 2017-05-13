@@ -1,0 +1,14 @@
+@media only screen and (max-width: 800px) {
+	#unseen table td:nth-child(4),
+	#unseen table th:nth-child(4) {display: none;}
+}
+
+@media only screen and (max-width: 670px) {
+	#unseen table td:nth-child(6),
+	#unseen table th:nth-child(6){display: none;}
+}
+
+@media only screen and (max-width: 600px) {
+#unseen table td:nth-child(7),
+#unseen table th:nth-child(7){display: none;}
+}
