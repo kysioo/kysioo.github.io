@@ -1,0 +1,59 @@
+@font-face {
+font-family: 'Open Sans';
+src:
+    local('Open Sans'),
+    local('OpenSans-Regular'),
+    url('Open_Sans/OpenSans-Regular.ttf');
+}
+h1{
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+}
+
+body{
+background: #E9967A;
+font-family: 'Open Sans', sans-serif;
+}
+
+#home{
+  padding-left: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+section{
+  padding-left: 50px;
+  padding-right: 50px
+}
+}
+
+.wrapper{
+  margin: 0 auto;
+}
+
+#list {
+	text-align: left;
+	margin: 0 auto;
+	width: 150px;
+}
+
+#prompt {
+	display: block;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-bottom: 1px;
+}
+
+/*obrazki*/
+#twosources{
+  text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#clear{
+  background-color: yellow;
+}
