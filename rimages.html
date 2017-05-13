@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Roboto:400';
+
+        body {
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            background: #f5f7f9;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photos {
+            width: 99%;
+            margin: auto;
+        }
+
+        .loading {
+            width: 90%;
+            margin: auto;
+        }
+
+        .loading img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .loading p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <p>Jeśli chcemy uzyskać najlepsza jakość zdjęcia bez korzystania z resposywności obrazków, ładujemy go po prostu w najwyższej
+            rozdzielczości. W tym wypadku jest to <i>7680x4320</i>, wtedy czas ładowania dwóch zdjęć o tej samej rozdzielczośći
+            wynosi około <b>29</b> sekund.</p>
+        
+        <p>Natomiast w momencie gdy korzystamy z resposywności zdjęć mamy możliwość załadowania zdjęcia w mniejszej rozdzielczości,
+            odpowiedniej dla rozdzielczości naszego ekranu. W tym wypadku było to <i>5120x2880</i>, dla ekranu o rozdzielości
+            <i>1920x1080</i>. Czas ładowania tych dwóch zdjęć wyniósł około <b>11</b> sekund.</p>
+        
+    </div>
+    <br>
+    <div class="photos">
+        <picture>
+            <source media="(max-width: 270px)" srcset="assets/images/responsive/drugi480x270.jpg">
+            <source media="(max-width: 540px)" srcset="assets/images/responsive/drugi960x540.jpg">
+            <source media="(max-width: 1079px)" srcset="assets/images/responsive/drugi2k.jpg">
+            <source media="(max-width: 2159px)" srcset="assets/images/responsive/drugi4k.jpg">
+            <source media="(min-width: 2160px)" srcset="assets/images/responsive/drugi8k.jpg">
+			
+            <img src="assets/images/responsive/m_720.jpg">
+        </picture>
+		<picture>
+		
+		<img src="assets/images/responsive/pierwsze8k.jpg">
+		</picture>
+        <picture>
+            <source media="(max-width: 270px)" srcset="assets/images/responsive/pierwsze480x270.jpg">
+            <source media="(max-width: 540px)" srcset="assets/images/responsive/pierwsze960x540.jpg">
+            <source media="(max-width: 1080px)" srcset="assets/images/responsive/pierwsze2k.jpg">
+            <source media="(max-width: 2159px)" srcset="assets/images/responsive/pierwsze4k.jpg">
+            <source media="(min-width: 2160px)" srcset="assets/images/responsive/pierwsze8k.jpg">
+            <img src="assets/images/responsive/l_720.jpg">
+        </picture>
+    </div>
+</body>
+
+</html>
