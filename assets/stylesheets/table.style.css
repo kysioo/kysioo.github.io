@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  /*padding-right: 50px;
+  padding-left: 50px;*/
+}
+
+.th {
+    text-align:left;
+    font-weight:bold;
+
+	border-width: 1px;
+	padding: 10px;
+	border-style: groove;
+	border-color: #aaaaaa;
+	background-color: #AED6F1;
+    font-size:12px;
+    font-family: sans-serif;
+    overflow:hidden ;
+}
+
+.tr {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	background-color: #fefefe;
+}
+
+.numeric{
+  text-align: right;
+}
