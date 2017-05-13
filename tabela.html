@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+
+		<title>Plan</title>
+		<!-- <h1>Responsywna tableka z planem zajęć</h1> -->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <script src="assets/tablescript.js" type="text/javascript"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+		<script src="assets/tborzyszkowski.js" type="text/javascript"></script>
+		<script src="assets/wbzyl.js" type="text/javascript"></script>
+		<!-- <script src="assets/js/script.js" type="text/javascript"></script> -->
+		<link rel="stylesheet" href="assets/stylesheets/table.style.css" />
+		<link rel="stylesheet" href="assets/stylesheets/styleResponsive.css" />
+		<link rel="stylesheet" href="assets/stylesheets/unseen.css" />
+		<link rel="stylesheet" href="assets/stylesheets/flip-scroll.css" />
+
+
+<body>
+
+	
+
+
+	<div class='wrapper'>
+		<section>
+			<div id='list'>
+				<div id='prompt'>Podaj nazwisko nauczyciela</div>
+				<form id='formid' action="">
+						<input list=nauczyciele name=nauczyciel id="nauczycielid" value="" autofocus autocomplete=on />
+							<datalist id=nauczyciele>
+								<option value="Borzyszkowski, Tomasz, dr"><option value="Bzyl, Włodzimierz, dr">
+							</datalist>
+						<button id="clear" type="reset">Wyczyść</button>
+						<button id="usunpokaz" type="button">Pokaż</button>
+				</form>
+			</div>
+		</section>
+	</div> <!-- class wrapper -->
+
+
+<div class="container-fluid">
+ <section id="unseen">
+	<h3>Responsywność metodą Ukrywania mniej ważnych kolumn tabelki</h3>
+	<table id="plan">
+		<caption>Tytuł tabeli</caption>
+		<thead class="cf">
+			<tr>
+				<th class='th'>Dzien Tygodnia</th>
+				<th class='th'>Godzina</th>
+				<th allign=left class='th'>Przedmiot</th>
+				<th class='th'>Grupa</th>
+				<th class='th' class='numeric'>Sala</th>
+				<th class='th'>Uwagi</th>
+				<th class='th'>Rodzaj zajęć</th>
+			</tr>
+		</thead>
+		<tbody>
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var fieldValue;
+		var zmiennaplan;
+		document.getElementById('nauczycielid').addEventListener('change', function() {
+			fieldValue = document.getElementById('nauczycielid').value;
+			if(fieldValue == "Bzyl, Włodzimierz, dr"){
+				zmiennaplan = planwb;
+			}else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+				zmiennaplan = plantb;
+			}
+
+		  $(function() {
+		      $.each(zmiennaplan, function(i, item) {
+		        var $tr = $("<tr class='tr'>").append(
+		              $('<td>').text(item.dzien),
+		              $('<td>').text(item.godz),
+		              $('<td>').text(item.przedmiot),
+		              $('<td>').text(item.grupa),
+		              $('<td>').text(item.sala),
+		              $('<td>').text(item.typ),
+		              $('<td>').text(item.uwagi)
+		          );
+					$('#plan').append($tr);
+		      });
+			});
+		});
+	});
+	</script>
+	</tbody>
+	</table>
+</section>
+
+
+
+
+
+
+<script>
+// Czyszczenie tabeli przyciskiem
+document.addEventListener("DOMContentLoaded", function(){
+
+
+	const clear = document.getElementById('clear');
+	console.dir(clear);
+
+
+	clear.addEventListener('click', function() {
+		console.log("Kliknięcie");
+	 	$("#plan2 tbody tr").remove();
+	 	$("#plan tbody tr").remove();
+	});
+});
+</script>
+</body>
+
+
