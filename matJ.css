@@ -1,6 +1,6 @@
 body {
     font-size: 10.5px;
-    background-color: darkcyan;
+    background-color: magenta;
 }
 
 #container1 {
@@ -20,11 +20,11 @@ body {
 }
 
 .item-a, .item-c, .item-e, .item-i, .item-k, .item-m {
-    background-color: aqua;
+    background-color: Azure;
 }
 
 .item-b, .item-d, .item-f, .item-j, .item-l, .item-n {
-    background-color: darkorange;
+    background-color: Canary;
 }
 
 
