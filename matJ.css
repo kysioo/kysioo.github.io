@@ -1,0 +1,80 @@
+body {
+    font-size: 10.5px;
+    background-color: darkcyan;
+}
+
+#container1 {
+    /*background-color: yellow;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+    align-items: center;
+    grid-auto-flow: column;
+}
+
+.item-a, .item-b, .item-c, .item-d, .item-e, .item-f, .item-i, .item-j, .item-k, .item-l, .item-m, .item-n {
+    align-self: stretch;
+    /*text-align: center;*/
+    vertical-align: middle;
+    line-height: 80px;       /* the same as your div height */
+}
+
+.item-a, .item-c, .item-e, .item-i, .item-k, .item-m {
+    background-color: aqua;
+}
+
+.item-b, .item-d, .item-f, .item-j, .item-l, .item-n {
+    background-color: darkorange;
+}
+
+
+@media (min-width: 360px) {
+    body {
+        font-size: 11.5px;
+    }
+}
+
+
+@media (min-width: 375px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 412px) {
+    body {
+        font-size: 13.5px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    
+    #container1 {
+        grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    }
+    
+    .item-a, .item-b, .item-c, .item-d, .item-e, .item-f, .item-i, .item-j, .item-k, .item-l, .item-m, .item-n {
+        line-height: 100px;       /* the same as your div height */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #container1 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+    
+    .item-i, .item-k, .item-m {
+        background-color: darkorange;
+    }
+
+    .item-j, .item-l, .item-n {
+        background-color: aqua;
+    }
+}
