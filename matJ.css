@@ -20,11 +20,11 @@ body {
 }
 
 .item-a, .item-c, .item-e, .item-i, .item-k, .item-m {
-    background-color: Azure;
+    background-color: yellowgreen;
 }
 
 .item-b, .item-d, .item-f, .item-j, .item-l, .item-n {
-    background-color: Fandango;
+    background-color: magenta;
 }
 
 
@@ -71,10 +71,10 @@ body {
     }
     
     .item-i, .item-k, .item-m {
-        background-color: darkorange;
+        background-color: magenta;
     }
 
     .item-j, .item-l, .item-n {
-        background-color: aqua;
+        background-color: yellowgreen;
     }
 }
