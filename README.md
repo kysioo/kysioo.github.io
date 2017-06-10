@@ -5,6 +5,8 @@
 
 <BODY>
 
+<a href="rimages.html">zdjęcia</a>
+
 
 
 
